@@ -3,9 +3,9 @@ PostgreSQL Clients
 
 There are a selection of Graphical User Interfaces (GUIs) to use when working with PostgreSQL databases.  We will show you three of these clients.
 
-- pgAdmin III
-- pgAdmin 4
-- Navicat
+- pgAdmin III ([https://www.pgadmin.org/include/doc.php?docset=1.8&docpage=index.html](https://www.pgadmin.org/include/doc.php?docset=1.8&docpage=index.html))
+- pgAdmin 4 ([https://www.pgadmin.org/download/windows4.php](https://www.pgadmin.org/download/windows4.php))
+- Navicat ([https://www.pgadmin.org/download/windows4.php](https://www.pgadmin.org/download/windows4.php))
 
 pgAdmin 4
 ---------
@@ -46,7 +46,7 @@ pgAdmin III is the previous version of the pgAdmin client.  As pgAdmin 4 is a ma
 | ---- | ----------- |
 | Unsupported | pgAdmin III is no longer supported.  It is likely to stop working in future versions of the database server.  |
 | Discontinued | There is no longer development work on pgAdmin III.  |
-| Old UI | Slightly olf fashioned UI, logos, and experience |
+| Old UI | Slightly outdated user interface, logos, and experience |
 
 Navicat
 -------
