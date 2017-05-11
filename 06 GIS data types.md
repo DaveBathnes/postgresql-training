@@ -34,8 +34,8 @@ Shapefiles
 
 | Aspect | Details |
 | ------ | ------- |
-| Proprietary | ESRI based standard |
-| Common |
+| Proprietary | ESRI based format.  Non open. |
+| Common | Used everywhere.  Compatible with most software. |
 | Integration with PostGIS | Easy loading and exporting from PostGIS |
 
 
@@ -59,5 +59,5 @@ CSV
 | Readable | Easy to open in a text editor and read |
 
 ```CSV
-EX1 1EE,10,N,32,32,18,14,0,15,0,E92000001,E19000002,E18000010,E10000008,E07000041,E05003502,S,POINT (292079 92307)
+EX1 1EE,10,E18000010,E10000008,E07000041,E05003502,S,POINT (292079 92307)
 ```

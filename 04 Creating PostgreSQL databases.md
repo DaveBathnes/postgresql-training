@@ -78,7 +78,9 @@ Data can be manually loaded into PostgreSQL using SQL commands.
 
 ```PLpgSQL
 INSERT INTO postcodes
-VALUES('EX1 1EE',10,'N',32,32,18,14,0,15,0,'E92000001','E19000002','E18000010','E10000008','E07000041','E05003502','S','POINT (292079 92307)');
+VALUES('EX1 1EE',10,'N',32,32,18,14,0,15,0,'E92000001',
+'E19000002','E18000010','E10000008','E07000041','E05003502',
+'S','POINT (292079 92307)');
 ```
 
 Postgres also allows for loading in data using the COPY command.  Typically this will be loading into individual tables from CSV data.
