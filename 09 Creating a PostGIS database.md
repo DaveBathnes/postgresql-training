@@ -1,7 +1,7 @@
 Creating a PostGIS database
 ===========================
 
-Creating a POstGIS database involves the same steps as a normal POstgreSQL database.  Enabling POstGIS extensions on the database gives a greater variety of dat atypes and fucntions.
+Creating a PostGIS database involves the same steps as a normal POstgreSQL database.  Enabling PostGIS extensions on the database gives a greater variety of data types and fucntions.
 
 
 Create a normal database

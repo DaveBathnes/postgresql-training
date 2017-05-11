@@ -1,9 +1,7 @@
 PostGIS Data loading
 ====================
 
-We have already demonstrated loading data into a spatial database by using CSV data where the geographic data is in Well Known Text Form.
-
-Now we need to look at loading various other data formats into PostGIS.
+We have already demonstrated loading data into a spatial database by using CSV data where the geographic data is in Well Known Text Form.  Now we need to look at loading various other data formats into PostGIS.
 
 For these exercises we are going to be taking sample data from the Ordnance Survey, available at.
 
@@ -13,16 +11,14 @@ For these exercises we are going to be taking sample data from the Ordnance Surv
 
 For convenience, the data in these exercises is included in the data directory of these notes.
 
-Load AddressBase
--------------------
+Astun Loader: AddressBase
+-------------------------
 
 We will be taking the AddressBase Premium data, available in GML format.
 
-PostGIS will not directly import GML data.  Astun Technology have written an open source [Loader](https://github.com/AstunTechnology/Loader/wiki) for GML data.
+OS GML data is difficult to directly import into PostGIS.  Astun Technology have written an open source [Loader](https://github.com/AstunTechnology/Loader/wiki) for GML data.
 
-Follow the installation instructions [here](https://github.com/AstunTechnology/Loader/wiki/Installation).
-
-Once that it installed we need to use the following configuration in loader.config
+Follow the installation instructions [here](https://github.com/AstunTechnology/Loader/wiki/Installation).  Once that it installed we need to use the following configuration in loader.config
 
 ```
 # Use the OS AddressBase Premium preparation logic

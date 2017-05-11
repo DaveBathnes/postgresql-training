@@ -24,7 +24,7 @@ Returns the Y coordinate of the geometry.
 - [ST_Y documentation](https://postgis.net/docs/ST_Y.html)
 
 ```PLpgSQL
-select ST_Y(geom) from postcodes_geo where postcode = 'EX1 1EE';
+SELECT ST_Y(geom) FROM postcodes_geo WHERE postcode = 'EX1 1EE';
 ```
 
 ST_Transform
@@ -41,7 +41,8 @@ SELECT ST_Transform(geom, 4326) FROM postcodes_geo WHERE postcode  = 'EX1 1EE';
 Using that to extract the Lng/Lat:
 
 ```PLpgSQL
-SELECT ST_X(ST_Transform(geom, 4326)), ST_Y(ST_Transform(geom, 4326)) FROM postcodes_geo WHERE postcode  = 'EX1 1EE';
+SELECT ST_X(ST_Transform(geom, 4326)), ST_Y(ST_Transform(geom, 4326))
+FROM postcodes_geo WHERE postcode  = 'EX1 1EE';
 ```
 
 ST_DWithin
@@ -52,7 +53,8 @@ Returns results that are within a specified distance. In the case below, returns
 - [ST_DWithin documentation](https://postgis.net/docs/ST_DWithin.html)
 
 ```PLpgSQL
-select postcode from postcodes_geo where ST_DWithin(geom, ST_SetSRID(ST_MakePoint(292079, 92307), 27700), 100);
+SELECT postcode FROM postcodes_geo 
+WHERE ST_DWithin(geom, ST_SetSRID(ST_MakePoint(292079, 92307), 27700), 100);
 ```
 
 ST_Intersects
@@ -72,10 +74,11 @@ SELECT postcode FROM postcodes_geo WHERE ST_Intersects(
 ST_Centroid
 -----------
 
-Returns the centre point of a geometry.
+Returns the centre point of a geometry.  For example, return the centre point of this Street (using the Unique Street Reference Number).
 
 - [ST_Centroid documentation](https://postgis.net/docs/ST_Centroid.html)
 
 ```PLpgSQL
-select ST_X(ST_Centroid(wkb_geometry)), ST_X(ST_Centroid(wkb_geometry)) from street where usrn = 14202557
+SELECT ST_X(ST_Centroid(wkb_geometry)), ST_X(ST_Centroid(wkb_geometry))
+FROM street WHERE usrn = 14202557
 ```

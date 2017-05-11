@@ -6,8 +6,20 @@ Brief overview of selecting and querying data in PostgreSQL.  Many of these comm
 Using the pgAdmin 4 GUI
 -----------------------
 
+The Graphical User Interface can be used to do various basic queries such as return a certain number of rows from a table, or allow basic editing of the tables.  For example:
+
 1. In the pgAdmin explorer navigate in the tree to Databases > Training > Schemas > Public > Tables
 2. Right click on the postcodes table and select View All Rows
+
+For the rest of the exercises we will be using basic SQL commands and running these using the query tool.
+
+1. Ensure a database is selected in the left hand servers list.
+2. Select Tools > Query Tool.
+3. Queries can then be written in the editor and run by hitting F5 or clicking the run (lightning) icon.
+
+To run specific commands in the query editor, highlight the line you wish to run.  Otherwise the tool will attempt to run everything in the editor window.
+
+To run sequential commands in the query tool, ensure that the commands are separated by a semi colon.
 
 Selecting data
 ---------------
@@ -64,4 +76,15 @@ SQL Update commands will update data in a database table.  It is important to us
 UPDATE postcodes
 SET postcode = 'EX1 4BA'
 WHERE postcode = 'EX1 4BB'
+```
+
+Automating commands
+-------------------
+
+When you have a set of SQL commands that you want to run outside of using any client this can be done using the psql.exe application and passing it a file of SQL commands.
+
+- [psql documentation](https://www.postgresql.org/docs/9.2/static/app-psql.html)
+
+```BatchFile
+C:\Program Files\PostgreSQL\9.6\bin\psql.exe -f "mycommands.sql" -d mydatabase
 ```

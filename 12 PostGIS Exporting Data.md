@@ -26,7 +26,11 @@ The tool is installed as part of PostGIS and is installed at C:\Program Files\Po
 The tool can be used to run complex SQL commands.  These could be scheduled and set to run whenever appropriate.
 
 ```BatchFile
-"C:\Program Files\PostgreSQL\9.6\bin\pgsql2shp.exe" -f "C:\output" -u postgres training "select distinct a.* from ((select * from postcodes_geo where ST_DWithin(geom, ST_SetSRID(ST_MakePoint(292079, 92307), 27700), 100)) union all (select * from postcodes_geo where ST_DWithin(geom, ST_SetSRID(ST_MakePoint(292279, 92507), 27700), 100))) a"
+"C:\Program Files\PostgreSQL\9.6\bin\pgsql2shp.exe" -f "C:\output" -u postgres training 
+"SELECT distinct a.* FROM 
+((SELECT * FROM postcodes_geo WHERE ST_DWithin(geom, ST_SetSRID(ST_MakePoint(292079,92307),27700),100))
+UNION (SELECT * FROM postcodes_geo WHERE ST_DWithin(geom, ST_SetSRID(ST_MakePoint(292279,92507),27700),100))
+) as a"
 ```
 
 COPY
@@ -35,7 +39,7 @@ COPY
 We have primarily used the COPY command in PostgreSQL to import data, but it can also be used for exporting data.  It is best used for exporting tabular (CSV) data.
 
 ```PLpgSQL
-COPY postcodes_geo to 'C:\output\postcodes_geo.csv' CSV;
+COPY postcodes_geo TO 'C:\output\postcodes_geo.csv' CSV;
 ```
 
 That's exporting a single table to a CSV file, the same can be done with a custom query.

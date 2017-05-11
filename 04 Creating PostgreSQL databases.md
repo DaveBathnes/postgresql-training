@@ -6,10 +6,10 @@ It is easy to create databases in postgreSQL using either the GUI, or by directl
 Creating a database
 -------------------
 
-- In pgAdmin 4 Connect to the database server.
-- In the server tree select the postgres database.
-- Open up the query tool.  Tools > Query Tool.
-- Create a new database using the following query.  Once you've written the query click the Lightning icon to run.
+1. In pgAdmin 4 Connect to the database server.
+2. In the server tree select the postgres database.
+3. Open up the query tool.  Tools > Query Tool.
+4. Create a new database using the following query.  Once you've written the query click the Lightning icon to run.
 
 - [CREATE DATABASE documentation](https://www.postgresql.org/docs/current/static/sql-createdatabase.html)
 
